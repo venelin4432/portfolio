@@ -1,0 +1,86 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #f2f2f2;
+  color: #222;
+}
+
+/* Меню - най-отгоре и остава видимо при скролиране */
+nav {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+}
+
+nav a {
+  margin: 0 10px;
+}
+
+/* Име и една линия за мен */
+header {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 15px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+header p {
+  margin: 5px 0 0;
+}
+
+/* Секции */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+section {
+  padding: 20px 0;
+  scroll-margin-top: 50px; /* да не се скрива заглавието под менюто */
+}
+
+/* Карти с проекти - на телефон една под друга */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.card-icon {
+  font-size: 30px;
+}
+
+.card-links a {
+  margin-right: 15px;
+}
+
+/* Футър */
+footer {
+  text-align: center;
+  padding: 20px 15px;
+}
+
+/* На по-широк екран картите са по три в ред */
+@media (min-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
